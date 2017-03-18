@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="ee.tlu.hk.priidu.sensible" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Sensible</name>
+    <description>
+        Simple PhoneGap app using jQuery Mobile that demonstrates sensors
+    </description>
+    <author email="priidu@tlu.ee" href="https://hkdt.neolms.com">
+        Priidu Paomets
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="android-minSdkVersion" value="19" />
+    <preference name="android-targetSdkVersion" value="19" />
+    <platform name="ios">
+        <preference name="Orientation" value="all" />
+    </platform>
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <platform name="android">
+        <allow-intent href="market:*" />
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+    </platform>
+    <engine name="android" spec="~6.0.0" />
+</widget>

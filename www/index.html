@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>Sensible - Sensor app</title>
+
+        <link rel="stylesheet" type="text/css" href="css/themes/default/jquery.mobile-1.4.5.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/themes/default/jquery.mobile.theme-1.4.5.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+    </head>
+    <body>
+        <div class="app">
+            
+            <div data-role="page" id="home">
+				<header data-role="header">
+					<h1>Sensible</h1>
+				</header>
+                
+                <div data-role="content">
+					<nav data-role="navbar">
+						<ul>
+							<li> <a href="#home" class="ui-btn-active">Kodu</a></li>
+							<li> <a href="#compass">Kompass</a></li>
+							<li> <a href="#motion">Liikumisandur</a></li>
+							<li> <a href="#map">Kaart</a></li>
+						</ul>
+					</nav>
+					<h3>Tere</h3>
+					<p>Selle rakenduse abil uurime, kuidas seadme anduritele ligi saada</p>
+                
+                </div>
+
+                <div data-role="footer">
+                    <h3>Mobiilirakenduste arendamine</h3>
+                </div>
+            </div>
+            
+			<div data-role="page" id="compass">
+				<header data-role="header">
+					<h1>Sensible</h1>
+				</header>
+				
+				<div data-role="content">
+					<nav data-role="navbar">
+						<ul>
+							<li> <a href="#home">Kodu</a></li>
+							<li> <a href="#compass" class="ui-btn-active">Kompass</a></li>
+							<li> <a href="#motion">Liikumisandur</a></li>
+							<li> <a href="#map">Kaart</a></li>
+						</ul>
+					</nav>
+					<h3>Kompass</h3>
+					<div id="compass-heading"></div>
+					<div class="content-container">
+						<div id="compass-rose"></div>
+						<div id="compass-needle"></div>
+					</div>
+                    <div id="compass-error" class="error"></div>
+				</div>
+			
+				<div data-role="footer">
+					<h3>Mobiilirakenduste arendamine</h3>
+				</div>
+			</div>
+				
+			<div data-role="page" id="motion">
+				<header data-role="header">
+					<h1>Sensible</h1>
+				</header>
+				
+				<div data-role="content">
+					<nav data-role="navbar">
+						<ul>
+							<li> <a href="#home">Kodu</a></li>
+							<li> <a href="#compass">Kompass</a></li>
+							<li> <a href="#motion" class="ui-btn-active">Liikumisandur</a></li>
+							<li> <a href="#map">Kaart</a></li>
+						</ul>
+					</nav>
+					<h3>Liikumine</h3>
+					<div id="motion-info"></div>
+					<div class="content-container" id="motionBoard">
+						<!--<canvas id="board" width="400px" height="350px"></canvas>-->
+					</div>
+                    <div id="accelerator-error" class="error"></div>
+				</div>
+			
+				<div data-role="footer">
+					<h3>Mobiilirakenduste arendamine</h3>
+				</div>
+			</div>
+				
+			<div data-role="page" id="map">
+				<header data-role="header">
+					<h1>Sensible</h1>
+				</header>
+				
+				<div data-role="content">
+					<nav data-role="navbar">
+						<ul>
+							<li> <a href="#home">Kodu</a></li>
+							<li> <a href="#compass">Kompass</a></li>
+							<li> <a href="#motion">Liikumisandur</a></li>
+							<li> <a href="#map" class="ui-btn-active">Kaart</a></li>
+						</ul>
+					</nav>
+					<h3>Asukoht</h3>
+					<div id="location">
+					</div>
+					<div id="address">
+					</div>
+					<div class="content-container">
+						<div id="mapDiv"></div>
+					</div>
+                    <div id="map-error" class="error"></div>
+
+					<!-- <button id="btnCalcRoute">Calc Route</button> -->
+					<div id="routeInfo">
+					</div>
+				</div>
+			
+				<div data-role="footer">
+					<h3>Mobiilirakenduste arendamine</h3>
+				</div>
+			</div>
+            
+        </div>
+        
+        <script type="text/javascript" src="cordova.js"></script>
+		<!--script type="text/javascript" src="js/lib/jquery-3.1.1.min.js"></script-->
+		<script type="text/javascript" src="js/lib/jquery-2.2.1.min.js"></script>
+		<script type="text/javascript" src="js/lib/jquery.mobile-1.4.5.min.js"></script>
+        <script type="text/javascript" src="js/app/index.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAeLnPKCvAmhuSZ6A2MD31FYDu-zz1mAM&callback=app.onMapReady"
+    async defer></script>
+        
+    </body>
+</html>
